@@ -1,0 +1,241 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0 auto;
+    overflow-x: hidden;
+   /* outline: 1px solid red;*/
+}
+
+:root{
+    --primary-color: #F8F9FA;
+    --secondary-color: #0A192F;
+}
+
+.dark-theme {
+    --primary-color: #0A192F;
+    --secondary-color: #E0E0E0;
+    /* --third-color: #b6b4b4;*/
+}
+    
+
+body{
+    font-family: inter, sans-serif;
+    color: var(--primary-color);
+    background-color: var(--secondary-color);
+    overflow-x: hidden;
+
+}
+
+header{
+    height: 10vh;
+    width: 100vw;
+    margin: 1rem;
+    z-index: 10;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    letter-spacing: 0.1rem;
+    text-align: center;
+    border-bottom: 2px solid rgba(255, 255, 255, 0.148);
+}
+.logo{
+    color: var(--primary-color);
+    text-decoration: none;
+    font-weight: bold;
+    font-size: x-large;
+    height: auto;
+}
+
+nav{
+    border: 2px solid rgba(255, 255, 255, 0.148);
+    padding: 0.25rem;
+    border-radius: 10px;
+}
+
+.projects{
+    margin: 0  1.5rem;
+}
+
+.contactPage{
+    background-color: #007BFF;
+    border: 1px solid transparent;
+    border-radius: 4em;
+    padding: 0.15rem 0.5rem;
+}
+
+nav a{
+    color: var(--primary-color);
+    text-decoration: none;
+    position: relative;
+    height: auto;
+    font-size: 1em;
+}
+nav a:hover{
+   background-color: #007BFF;
+   border: 1px solid transparent;
+   border-radius: 4em;
+   padding: 0.15rem 0.5rem;
+}
+
+.bxs-sun{
+    color: var(--primary-color);
+    font-size: 1.5em;
+    cursor: pointer;
+    height: 30px;
+}
+
+main{
+    width: 90vw;
+    margin: 5em;
+}
+
+.container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+
+.myName{
+    max-width: 50vw;
+}
+
+.Mypicture{
+    height: 40vh;
+    border-radius: 20px;
+    position: relative;
+    z-index: 1000;
+    max-width: 50vw;
+    right: 2rem;
+}
+
+.jobs{
+    color: #007BFF;
+    position: relative;
+}
+@keyframes animate{
+    0%, 20%{
+        left: 0;
+    }
+    40%, 60%{
+        left: 100%;
+    }
+    100%{
+        left: 0;
+    }
+}
+.jobs::before{
+    content: '|';
+    position: absolute;
+    background-color: var(--secondary-color);
+    width: 100%;
+    left: 0;
+    animation: animate 4s steps(8) infinite;
+}
+
+/*start nav-toggler*/
+.nav-toggler{
+    position: fixed;
+    top: 2rem;
+    right: 2.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: transparent;
+    cursor: pointer;
+    height: 30px;
+    width: 4vw;
+    border: none;
+    outline: none;
+    z-index: 1000;
+}
+
+.line{
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--primary-color);
+    height: 2px;
+    width: 4vw;
+    transition: transform 0.3s ease-out, opacity 0.1s ease-out;
+}
+
+.l1{
+    transform: translateY(-10px);
+}
+.l3{
+    transform: translateY(10px);
+}
+
+.nav-toggler.active .l1{
+    transform: translateY(0px) rotate(135deg);
+}
+
+.nav-toggler.active .l2{
+    opacity: 0;
+}
+
+.nav-toggler.active .l3{
+    transform: translateY(0px) rotate(-135deg);
+}
+
+/*end nav-toggler*/
+
+/*START RESPONSIVE*/
+@media (max-width: 1024px){
+    nav{
+        position: fixed;
+        z-index: 9999;
+        right: 0;
+        display: flex;
+        bottom: 0px;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        gap: 1.5em;
+        height: 100vh;
+        width: 30vw;
+        margin-left: 15.62rem;
+        transform: translateX(100%);
+        backdrop-filter: glur(10px);
+        background-color: var(--secondary-color);
+        transition: transform 0.3s;
+    }
+    nav.active{
+        transform: translate(0);
+    }
+    .nav-toggler{
+        position: fixed;
+        z-index: 9999;
+        top: 2rem;
+        right: 2.5rem;
+        height: 30px;
+    }
+    .bxs-sun{
+        position: fixed;
+        z-index: 1000;
+        top: 2rem;
+        left: 2.5rem;
+        height: 30px;
+      }
+}
+
+@media (min-width: 1025px){
+    .nav-toggler{
+        display: none;
+    }
+
+   .container{
+    position: absolute;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+   }
+   .Mypicture{
+    margin-left: 15rem;
+   }
+}
+/*END RESPONSIVE*/ 
