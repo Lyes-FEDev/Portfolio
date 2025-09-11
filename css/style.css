@@ -22,8 +22,7 @@ body{
     font-family: inter, sans-serif;
     color: var(--primary-color);
     background-color: var(--secondary-color);
-    overflow-x: hidden;
-
+    overflow: hidden;
 }
 
 header{
@@ -99,17 +98,21 @@ main{
 
 .myName{
     max-width: 50vw;
-    margin-right: 150px;
+    left: 5rem;
+    
 }
 
 .Mypicture{
-    height: 40vh;
+    height: 50vh;
     border-radius: 25px;
-    position: relative;
-    z-index: 1000;
+    z-index: 1;
     max-width: 50vw;
-    right: 2rem;
-}
+    right: 1rem;
+} 
+
+.so-net{
+        margin-top: 2rem;
+      }
 
 .jobs{
     color: #007BFF;
@@ -221,10 +224,27 @@ main{
         left: 2.5rem;
         height: 30px;
       }
-      .conainter2{
-        display: inline;
-        margin-top: 2rem;
-        text-align: center;
+      .conainter{
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-content: center;
+        flex-direction: column;
+        flex-wrap: wrap;
+      }
+      .myName{
+      left: -3rem;
+      position: relative;
+      }
+      .Mypicture{
+         max-width: 50vw;
+         right: 3rem;
+         position: relative; 
+      }
+      .cv-button{
+        position: relative;
+        display: inline-block;
+        margin: 0 auto;
       }
 }
 
@@ -233,15 +253,6 @@ main{
         display: none;
     }
 
-   .container{
-    position: absolute;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-   }
-   .Mypicture{
-    margin-left: 15rem;
-   }
 }
 /*END RESPONSIVE*/ 
 
