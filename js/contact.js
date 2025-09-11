@@ -13,9 +13,9 @@ const icon = document.getElementById('iconSun');
 icon.addEventListener('click', function(){
     document.body.classList.toggle('dark-theme');
     if(document.body.classList.contains('dark-theme')){
-        icon.src = "moon.png";
+        icon.src = "images/contact/moon-contact.png";
     }else{
-        icon.src = "sun.png";
+        icon.src = "images/contact/sun-contact.png";
     }
 })
 /* end Dark-theme*/
