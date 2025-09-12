@@ -4,23 +4,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio Lyes</title>
+
     <link rel="stylesheet" href="css/contact.css">
     <script src="js/contact.js" defer></script>
 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"> 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
-
-    <!--Form-->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/intl-tel-input@25.10.6/build/css/intlTelInput.css">
-  <script src="https://cdn.jsdelivr.net/npm/intl-tel-input@25.10.6/build/js/intlTelInput.min.js"></script>
-   <!--END Form-->
-
-
 </head>
 <body>
+
     <header>
         <div>
             <a class="logo" href="index.html">Portfolio.</a>
@@ -33,27 +28,76 @@
 
         <img src="images/contact/sun-contact.png" class="bxs-sun" id="iconSun" alt="icon moon">
 
-
-      <button type="button" aria-label="button curtain navigation" class="nav-toggler" id="navButton">
+        <button type="button" aria-label="button curtain navigation" class="nav-toggler" id="navButton">
             <span class="line l1"></span>
             <span class="line l2"></span>
             <span class="line l3"></span>
         </button>
     </header>
 
- <h1 class="title">Contact</h1>
+    <h1 class="title">Contact</h1>
+    <p class="text">“I'm open to new opportunities and collaborations. Feel free to send me a message — I'll be glad to reply as soon as possible.”</p>
 
- <p class="text">“I'm open to new opportunities and collaborations. Feel free to send me a message — I'll be glad to reply as soon as possible.”</p>
+    <form action="https://formsubmit.co/lyesmedjahed17@gmail.com" method="post">
+        <label for="firstname">First Name:</label>
+        <input type="text" placeholder="Enter your first name">
 
-<form action=""https://formsubmit.co/lyesmedjahed17@gmail.com" method="post">
-    <label for="firstname">Firstname:</label>
-    <input type="text">
-    
-    <label for="lastname">Lastname:</label>
-    <input type="text"><br><br>
+        <label for="lastname">Last Name:</label>
+        <input type="text" placeholder="Enter your last name"><br><br>
+ 
 
-    <p id="output">Please enter a valid number below</p>
-    <input id="phone" class="phone" type="tel">
+        <select id="country" name="country">
+            <!-- Europe -->
+            <option value="+33" title="France">🇫🇷 +33</option>
+            <option value="+49" title="Germany">🇩🇪 +49</option>
+            <option value="+44" title="United Kingdom">🇬🇧 +44</option>
+            <option value="+385" title="Croatia">🇭🇷 +385</option>
+            <option value="+32" title="Belgium">🇧🇪 +32</option>
+            <option value="+31" title="Netherlands">🇳🇱 +31</option>
+            <option value="+41" title="Switzerland">🇨🇭 +41</option>
+            <option value="+352" title="Luxembourg">🇱🇺 +352</option>
+            <option value="+353" title="Ireland">🇮🇪 +353</option>
+            <option value="+46" title="Sweden">🇸🇪 +46</option>
+            <option value="+47" title="Norway">🇳🇴 +47</option>
+            <option value="+358" title="Finland">🇫🇮 +358</option>
+            <option value="+45" title="Denmark">🇩🇰 +45</option>
+            <option value="+34" title="Spain">🇪🇸 +34</option>
+            <option value="+39" title="Italy">🇮🇹 +39</option>
+            <option value="+351" title="Portugal">🇵🇹 +351</option>
+            <option value="+43" title="Austria">🇦🇹 +43</option>
+            <!-- Amérique du Nord -->
+            <option value="+1" title="USA">🇺🇸 +1</option>
+            <option value="+1" title="Canada">🇨🇦 +1</option>
+            <!-- Océanie -->
+            <option value="+61" title="Australia">🇦🇺 +61</option>
+            <option value="+64" title="New Zealand">🇳🇿 +64</option>
+            <!-- Asie / Moyen-Orient -->
+            <option value="+65" title="Singapore">🇸🇬 +65</option>
+            <option value="+971" title="UAE">🇦🇪 +971</option>
+            <option value="+972" title="Israel">🇮🇱 +972</option>
+        </select><input type="tel" id="phone" name="phone" placeholder="(0)919875623" required   oninvalid="this.setCustomValidity('Please enter your phone number')"
+        oninput="this.setCustomValidity('')">  
+          
 
-</form>
+        <label for="email">*Email:</label>
+        <input type="email" placeholder="exemple@email.com" required 
+        oninvalid="this.setCustomValidity('Please enter your email address')"
+        oninput="this.setCustomValidity('')"><br><br>
+
+       <label for="dropdown">*Contact reason:</label>
+        <select name="contactReason" id="dropdown" required>
+            <option value="hiring">Recruitment / Hiring</option>
+            <option value="freelance">Freelance / Project Inquiry</option>
+            <option value="Collaboration">Collaboration / Partnership</option>
+            <option value="training">Training / Mentorship</option>
+            <option value="other">General Inquiry / Other</option>
+        </select><br><br>
+
+        <label for="message">*Content message:</label><br>
+        <textarea name="textarea" id="textarea" rows="25" cols="70"  placeholder="Tape your message here..." required></textarea><br><br>
+        <button class="button" id="button">Send</button>
+
+    </form>
+
 </body>
+</html>

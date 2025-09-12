@@ -79,50 +79,23 @@ main{
     margin: 5em;
 }
 
-.container{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: 2rem;
+/*Title*/
+.title{
+    text-align: center;
+    margin-top: 3rem;
+    letter-spacing: 0.1rem;
 }
+/*END Title*/
 
-.myName{
-    max-width: 50vw;
+/*Text "h3"*/
+.text{
+    line-height: 1.6;
+    word-spacing: 0.1rem;
+    letter-spacing: 0.03rem;
+    margin: 1.25rem 3rem; ;
+    text-align: center;
 }
-
-.Mypicture{
-    height: 40vh;
-    border-radius: 20px;
-    position: relative;
-    z-index: 1000;
-    max-width: 50vw;
-    right: 2rem;
-}
-
-.jobs{
-    color: #007BFF;
-    position: relative;
-}
-@keyframes animate{
-    0%, 20%{
-        left: 0;
-    }
-    40%, 60%{
-        left: 100%;
-    }
-    100%{
-        left: 0;
-    }
-}
-.jobs::before{
-    content: '|';
-    position: absolute;
-    background-color: var(--secondary-color);
-    width: 100%;
-    left: 0;
-    animation: animate 4s steps(8) infinite;
-}
+/*ENDText "h3"*/
 
 /*start nav-toggler*/
 .nav-toggler{
@@ -178,7 +151,6 @@ main{
     padding: 0.15rem 0.5rem;
     margin: 0  1.5rem;
 }
-
 /*end nav-toggler*/
 
 /*START RESPONSIVE*/

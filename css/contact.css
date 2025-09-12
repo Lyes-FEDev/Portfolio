@@ -200,6 +200,7 @@ main{
 .title{
     text-align: center;
     margin-top: 3rem;
+    letter-spacing: 0.1rem;
 }
 /*END Title*/
 
@@ -207,6 +208,7 @@ main{
 .text{
     line-height: 1.6;
     word-spacing: 0.1rem;
+    letter-spacing: 0.1rem;
     margin: 1.25rem 3rem; ;
     text-align: center;
 }
@@ -216,12 +218,28 @@ main{
 form{
     text-align: center;
     color: var(--secondary-color);
-    background-color:var(--primary-color);
-    margin: 1rem 3rem;
-    padding: 1.5rem 2rem;
+    background-color: var(--primary-color);
+    margin: 2rem 5rem;
+    padding: 1.05rem 2rem;
 }
 
 .phone{
-    padding: 0.1rem;
+    padding: 0.2rem;
+}
+input,
+select{
+    padding: 0.2rem;
+}
+
+.button{
+    color: var(--primary-color);
+    background-color: #007BFF;
+    padding: 0.5rem 1.5rem;
+    border: 1px solid transparent;
+    border-radius: 0.5rem;
+}
+.button:hover{
+    background-color: #0056b3;
+    cursor: pointer;
 }
 /*Form*/
