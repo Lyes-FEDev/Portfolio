@@ -19,11 +19,10 @@
     
 
 body{
-    font-family: inter, sans-serif;
+    font-family: 'Inter', 'Roboto', sans-serif;;
     color: var(--primary-color);
     background-color: var(--secondary-color);
     overflow-x: hidden;
-
 }
 
 header{
@@ -90,50 +89,7 @@ main{
     margin: 5em;
 }
 
-.container{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: 2rem;
-}
 
-.myName{
-    max-width: 50vw;
-}
-
-.Mypicture{
-    height: 40vh;
-    border-radius: 20px;
-    position: relative;
-    z-index: 1000;
-    max-width: 50vw;
-    right: 2rem;
-}
-
-.jobs{
-    color: #007BFF;
-    position: relative;
-}
-@keyframes animate{
-    0%, 20%{
-        left: 0;
-    }
-    40%, 60%{
-        left: 100%;
-    }
-    100%{
-        left: 0;
-    }
-}
-.jobs::before{
-    content: '|';
-    position: absolute;
-    background-color: var(--secondary-color);
-    width: 100%;
-    left: 0;
-    animation: animate 4s steps(8) infinite;
-}
 
 /*start nav-toggler*/
 .nav-toggler{
@@ -239,3 +195,33 @@ main{
    }
 }
 /*END RESPONSIVE*/ 
+
+/*Title*/
+.title{
+    text-align: center;
+    margin-top: 3rem;
+}
+/*END Title*/
+
+/*Text "p"*/
+.text{
+    line-height: 1.6;
+    word-spacing: 0.1rem;
+    margin: 1.25rem 3rem; ;
+    text-align: center;
+}
+/*ENDText "p"*/
+
+/*Form*/
+form{
+    text-align: center;
+    color: var(--secondary-color);
+    background-color:var(--primary-color);
+    margin: 1rem 3rem;
+    padding: 1.5rem 2rem;
+}
+
+.phone{
+    padding: 0.1rem;
+}
+/*Form*/

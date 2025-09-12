@@ -12,6 +12,13 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+
+    <!--Form-->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/intl-tel-input@25.10.6/build/css/intlTelInput.css">
+  <script src="https://cdn.jsdelivr.net/npm/intl-tel-input@25.10.6/build/js/intlTelInput.min.js"></script>
+   <!--END Form-->
+
+
 </head>
 <body>
     <header>
@@ -34,6 +41,19 @@
         </button>
     </header>
 
- <h1>Contact</h1>
+ <h1 class="title">Contact</h1>
 
+ <p class="text">“I'm open to new opportunities and collaborations. Feel free to send me a message — I'll be glad to reply as soon as possible.”</p>
+
+<form action=""https://formsubmit.co/lyesmedjahed17@gmail.com" method="post">
+    <label for="firstname">Firstname:</label>
+    <input type="text">
+    
+    <label for="lastname">Lastname:</label>
+    <input type="text"><br><br>
+
+    <p id="output">Please enter a valid number below</p>
+    <input id="phone" class="phone" type="tel">
+
+</form>
 </body>
